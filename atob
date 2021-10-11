@@ -1,0 +1,47 @@
+using System;
+
+namespace fromatob
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a;
+            int b;
+            int reps = 0;
+  
+            string ab = Console.ReadLine();
+            string[] abArray = ab.Split( ' ') ;
+
+    
+
+            a = Convert.ToInt32(abArray[0]);
+
+            b = Convert.ToInt32(abArray[1]);
+
+            //WriteLine(a);
+            // WriteLine(b);
+
+            while (a > b)
+            {
+                if (a % 2 != 0)
+                {
+                    a += 1;
+                    reps += 1;
+                }
+
+                a /= 2;
+                reps += 1;
+            }
+            if (a < b)
+            {
+                reps += b - a;
+            }
+
+            Console.WriteLine(reps);
+        }
+
+
+    }
+}
